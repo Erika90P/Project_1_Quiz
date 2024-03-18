@@ -16,15 +16,18 @@ This game is one-on-one.”
 
 MVP Goals
 
+* The layer should be given 5 questions that they can aswer
  * The player must select the correct answer to continue to the next question
  * The player will receive an immediate alert when selecting the answer
+ * The player should to navigade for the next question
+ * The player should have a end of game state that show the score 
  
  Stretch Goal
  
  * As a player, I would like a victory animation when I win the game, so that I feel good about my victory!
 
-
-
+ * As a player I would like a vitory sound animation  when I win the game, so that I feel good about my victory!
+ 
 #### Timeline - Daily Accountability
 
 
