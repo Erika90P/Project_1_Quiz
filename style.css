@@ -1,19 +1,104 @@
-*{
+* {
     margin:0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
+    box-sizing: border-box;   
 }
 
-body{
-
-    background: rgba(206, 224, 13, 0.533);
+body {
+    background:rgba(131, 1, 1, 0.815)   
 }
 
 .app {
+     width: 90%;
+    max-width: 600%;
+    border-radius: 10px;
+    padding: 30px ;
+    text-align: center;
+    font-size: larger;
+    font-family: "Sonsie One", system-ui;
+}
+.app h1 {
 
-    background-color: chocolate;
-    width: 90%;
-    margin: 100 auto 0;
+    font-family: "Sonsie One", system-ui;
+    font-weight: 600px;
+    font-style: normal;
+    font-size: 80px;
+    color: black;
+    margin: 30px 30px;
+ 
+}
+
+.quiz {
+    padding: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+.quiz h2 {
+
+    font-size: 18px;
+    border-radius: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+.picture {
+display:flex;
+flex-direction: column;
+border:1px solid rgba(255,255,255,0);
+margin: 40px 40px;
+}
+
+ .user {
+    margin: 30px 30px ;
+    border-radius: 50%;
+    box-shadow: -1px 0px 268px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 0px 268px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 268px 0px rgba(0,0,0,0.75);
+    max-width: 100%;
+    /* max-height: 600px ; */
+    margin: 0 auto;
+    height: auto;
+    color: rgb(33, 1, 1);
+}
+
+.btn {
     
+    margin: 30px 30px;
+    background: rgb(227, 224, 27);
+    font-weight: 500;
+    border: 2px solid rgb(19, 19, 18);
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border-top: 20px ;
+    cursor: pointer;
+    transition: all 1s;
+    color: blue;
+}
+
+.btn:hover:not([disabled]){
+
+    background: white;
+    color:rgb(120, 10, 10);
+    padding: 20px 0;
+}
+.btn:disabled{ 
+    cursor: no-drop;
+}
+#next-btn {
+    background: rgb(167, 160, 177);
+    color:black;
+    width: 100px;
+    padding: 10px;
+
+}
+
+.correct {
+
+    background:rgb(227, 224, 27)
+}
+.incorrect {
+
+    background: tomato;
 }
