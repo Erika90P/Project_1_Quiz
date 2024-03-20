@@ -22,6 +22,16 @@ const questions = [
         image: "https://r7c7u2r3.rocketcdn.me/wp-content/uploads/2019/08/bigstock-Ha-penny-Bridge-Dublin-Irela-298857532.jpg"
     },
     {
+        question: " What is the capital of Slovenia??",
+        answers: [
+            { text: "Maribor", correctAnswer: false },
+            { text: "Ljubljana", correctAnswer: true }
+
+        ],
+
+        image: "https://cdn.britannica.com/68/93068-050-E7C71026/Ljubljana-Ljubljanica-River-Slovenia.jpg"
+    },
+    {
         question: " What is the capital of Croatia?",
         answers: [
             { text: "Zagreb", correctAnswer: true },
@@ -29,6 +39,35 @@ const questions = [
 
         ],
         image: "https://www.travellingking.com/wp-content/uploads/2022/12/Zagreb-Aerial-view-on-cathedral-in-Zagreb-city-capital-town-of-Croatia-european-landmarks..jpg"
+    },
+    {
+        question: " What is the capital of Poland?",
+        answers: [
+            { text: "Warsaw", correctAnswer: true },
+            { text: "Lublin", correctAnswer: false }
+
+        ],
+        image: "https://www.worldatlas.com/r/w960-q80/upload/b8/7e/7b/shutterstock-190990370.jpg"
+    },
+    {
+        question: " What is the capital of Latvia?",
+        answers: [
+            { text: "Jūrmala", correctAnswer: false },
+            { text: "Riga", correctAnswer: true }
+
+        ],
+
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/61/Riga_Latvia_City_View_%28262449009%29.jpeg"
+    },
+    {
+        question: " What is the capital of Luxembourg?",
+        answers: [
+            { text: "Diekirch", correctAnswer: false },
+            { text: "Luxembourg City", correctAnswer: true }
+
+        ],
+
+        image: "https://www.luxembourg-city.com/thumbs/0827faa0-1f55-11eb-a4c6-7103ad98fc41.webp"
     },
     {
         question: " What is the capital of Belgium??",
@@ -67,7 +106,7 @@ function startQuestion() { // con esta funcion estoy empezando a utilizar la pre
 
     currentQuestionIndex = 0
     score = 0
-    nextBtn.innerHTML = "next"
+    nextBtn.innerHTML = "Next"
 
 
 }
@@ -130,8 +169,18 @@ function selectAnswer(e) {
         selectedbtn.classList.add('correct');
         score++;
 
+        const celebrationEmoji = document.createElement('span');
+        celebrationEmoji.innerHTML = ' 🎉🎉🎉 ';
+        celebrationEmoji.classList.add('celebration-emoji');
+        selectedbtn.appendChild(celebrationEmoji);
+
     } else {
         selectedbtn.classList.add('incorrect');
+
+        const sadEmoji = document.createElement('span');
+        sadEmoji.innerHTML = ' 😢😢😢 ';
+        sadEmoji.classList.add('sad-emoji');
+        selectedbtn.appendChild(sadEmoji);
     }
     Array.from(answerButton.children).forEach(button => {
         if (button.dataset.correctAnswer === 'true') {
@@ -142,11 +191,23 @@ function selectAnswer(e) {
 
     nextBtn.style.display = 'block';
 }
+// function showScore() {
+//     resetState();
+//     questionGame.innerHTML = `you scored ${score}out of ${questions.length}!`;
+//     nextBtn.innerHTML = 'Play Again!';
+//     nextBtn.style.display = 'block'
+// }
+
 function showScore() {
     resetState();
-    questionGame.innerHTML = `you scored ${score}out of ${questions.length}!`;
-    nextBtn.innerHTML = 'Play Again!';
-    nextBtn.style.display = 'block'
+    questionGame.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextBtn.style.display = 'none'; // Oculta el botón "Next"
+    tryAgainBtn.style.display = 'block'; // Muestra el botón "Try Again"
+    tryAgainBtn.addEventListener('click', () => {
+        startQuestion(); // Reinicia el juego al hacer clic en "Try Again"
+        tryAgainBtn.style.display = 'none'; // Oculta el botón "Try Again"
+
+    });
 }
 
 function handleNextbtn() {
@@ -171,7 +232,8 @@ nextBtn.addEventListener('click', () => {
         console.log('this startquestion function is being executed')
     }
 });
-startQuestion();
+
+// startQuestion();
 
 
 

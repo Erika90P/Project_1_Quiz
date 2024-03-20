@@ -16,7 +16,7 @@ This game is one-on-one.”
 
 MVP Goals
 
-* The layer should be given 5 questions that they can aswer
+* The layer should be given 8 questions that they can aswer
  * The player must select the correct answer to continue to the next question
  * The player will receive an immediate alert when selecting the answer
  * The player should to navigade for the next question
