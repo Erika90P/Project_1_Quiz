@@ -1,55 +1,57 @@
 /*-------------------------------- Constants --------------------------------*/
-const questions = [ 
-{  
-    question: "What is the capital of Hungary?", 
-    answers: [
-        {text: "Budapest", correctAnswer: true },
-        {text: "Miskolc", correctAnswer: false },
-        
-        //image: "https://mavericklodges.com/media/visit-budapest-parlament.jpg"
-    ]
-},
+const questions = [
+    {
+        question: "What is the capital of Hungary?",
+        answers: [
+            { text: "Budapest", correctAnswer: true },
+            { text: "Miskolc", correctAnswer: false }
 
-{  
-    question: " What is the capital of Ireland??", 
-    answers: [
-        {text: "Cork" , correctAnswer: false },
-        {text: "Dublin" , correctAnswer: true }
+        ],
 
+        image: "https://mavericklodges.com/media/visit-budapest-parlament.jpg"
+    },
 
-        //image: "https://r7c7u2r3.rocketcdn.me/wp-content/uploads/2019/08/bigstock-Ha-penny-Bridge-Dublin-Irela-298857532.jpg"
-    
-    ]
-},
-{
-question: " What is the capital of Croatia?", 
-answers: [
-    {text: "Zagreb" , correctAnswer: true },
-    {text: "Zadar" , correctAnswer: false },
-    
-    //image: "https://www.travellingking.com/wp-content/uploads/2022/12/Zagreb-Aerial-view-on-cathedral-in-Zagreb-city-capital-town-of-Croatia-european-landmarks..jpg"
+    {
+        question: " What is the capital of Ireland??",
+        answers: [
+            { text: "Cork", correctAnswer: false },
+            { text: "Dublin", correctAnswer: true }
+
+        ],
+
+        image: "https://r7c7u2r3.rocketcdn.me/wp-content/uploads/2019/08/bigstock-Ha-penny-Bridge-Dublin-Irela-298857532.jpg"
+    },
+    {
+        question: " What is the capital of Croatia?",
+        answers: [
+            { text: "Zagreb", correctAnswer: true },
+            { text: "Zadar", correctAnswer: false }
+
+        ],
+        image: "https://www.travellingking.com/wp-content/uploads/2022/12/Zagreb-Aerial-view-on-cathedral-in-Zagreb-city-capital-town-of-Croatia-european-landmarks..jpg"
+    },
+    {
+        question: " What is the capital of Belgium??",
+        answers: [
+            { text: "Brussels", correctAnswer: true },
+            { text: "Bruges", correctAnswer: false }
+
+        ],
+        image: "https://www.brussels.be/sites/default/files/styles/article_image__hd_/public/Manneken-Pis_1.jpg?itok=Sj9G92Kw"
+    }
 ]
-},
-{  
-question: " What is the capital of Belgium??", 
-answers: [
-    {text: "Brussels" , correctAnswer: true },
-    {text: "Bruges" , correctAnswer: false }
-
-    //image: "https://www.brussels.be/sites/default/files/styles/article_image__hd_/public/Manneken-Pis_1.jpg?itok=Sj9G92Kw"
-]
-}
-]
- const alertMesagge = "Game Over"
+const alertMesagge = "Game Over"
 
 // My game have 3 buttons//
 
 
 const alertMessage = "Game Over"
 const questionGame = document.getElementById('question');
+const pictureDiv = document.getElementById('picture')
 const answerButton = document.getElementById('answerButtons');
 const nextBtn = document.getElementById('next-btn')
 
+    // pictureDiv.appendChild()
 
 /*---------------------------- Variables (state) ----------------------------*/
 
@@ -63,40 +65,49 @@ let currentQuestionIndex = 0;
 
 function startQuestion() { // con esta funcion estoy empezando a utilizar la pregunta
 
-    currentQuestionIndex = 0 
+    currentQuestionIndex = 0
     score = 0
-    nextBtn.innerHTML = "next" 
+    nextBtn.innerHTML = "next"
+
 
 }
-    showQuestion();
+showQuestion();
 
-function showQuestion() { 
+function showQuestion() {
     resetState();
 
- // reset previos questions and answer 
+    // reset previos questions and answer 
 
-    let currentQuestion = questions[currentQuestionIndex]; 
+    let currentQuestion = questions[currentQuestionIndex];
     // porque le estoy pidiendo que me de las preguntas contenidas este index
-    
-    let questionNum = currentQuestionIndex + 1;
-    
+
+    let questionNum = currentQuestionIndex;
+    console.log('questionNum, ', questionNum);
+
     // necesito el numero de la pregunta si en index la pregunta es cero va a mostrar la primera, despues la segunda y asi sucesivamente
-    
+
     questionGame.innerHTML = currentQuestion.question; // this is the <h2 id= question del html>
-    
+
     // '.' son para separar el numero de pregunta con la pregunta .
 
     //necesito crear una funcion que cuando le de click me de las posibles respuestas de la pregunta
 
-    
-    
+
+    // const pictureDiv = document.getElementsByClassName('picture')
+    // pictureDiv.appendChild()
+
+    const imageElement = document.createElement('img');
+    imageElement.src = currentQuestion.image;
+    imageElement.classList.add('question-image');
+    answerButton.appendChild(imageElement);
+
     currentQuestion.answers.forEach(answer => {
 
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add('btn');
         answerButton.appendChild(button);
-        if(answer.correctAnswer){
+        if (answer.correctAnswer) {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
         button.addEventListener('click', selectAnswer);
@@ -104,58 +115,62 @@ function showQuestion() {
     });
 }
 
-function resetState(){
-nextBtn.style.display = 'none';
-while(answerButton.firstChild){
-    answerButton.removeChild(answerButton.firstChild);
-}
+function resetState() {
+    nextBtn.style.display = 'none';
+    while (answerButton.firstChild) {
+        answerButton.removeChild(answerButton.firstChild);
+    }
 }
 
 
-function selectAnswer(e){
+function selectAnswer(e) {
     const selectedbtn = e.target;
     const isCorrect = selectedbtn.dataset.correctAnswer === 'true'
-    if(isCorrect){
+    if (isCorrect) {
         selectedbtn.classList.add('correct');
-        score++; 
+        score++;
 
-    }else {
+    } else {
         selectedbtn.classList.add('incorrect');
     }
     Array.from(answerButton.children).forEach(button => {
-        if(button.dataset.correctAnswer === 'true'){
+        if (button.dataset.correctAnswer === 'true') {
             button.classList.add('correct');
         }
         button.disabled = true;
-        });
-
-        nextBtn.style.display = 'block';
-    }
-        function showScore(){
-            resetState();
-            questionGame.innerHTML = `you scored ${score}out of ${questions.length}!`;
-            nextBtn.innerHTML = 'Play Again!';
-            nextBtn.style.display='block'
-        }
-        function handleNextbtn() {
-            currentQuestionIndex++; // increases the question 
-            if (currentQuestionIndex < questions.length){
-            showQuestion();
-
-        } else {
-            showScore();
-        }
-
-    }
-
-    nextBtn.addEventListener('click', ()=>{
-        if(currentQuestionIndex < questions.length){
-            handleNextbtn();
-
-        }else { 
-            startQuestion();
-        }        
     });
+
+    nextBtn.style.display = 'block';
+}
+function showScore() {
+    resetState();
+    questionGame.innerHTML = `you scored ${score}out of ${questions.length}!`;
+    nextBtn.innerHTML = 'Play Again!';
+    nextBtn.style.display = 'block'
+}
+
+function handleNextbtn() {
+    currentQuestionIndex++; // increases the question 
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+
+    } else {
+        showScore();
+
+    }
+
+}
+
+nextBtn.addEventListener('click', () => {
+    if (currentQuestionIndex < questions.length) {
+        console.log('questions.length, ', questions.length)
+        handleNextbtn();
+        console.log('this handleNextbtn function is being executed')
+    } else {
+        startQuestion();
+        console.log('this startquestion function is being executed')
+    }
+});
 startQuestion();
 
 

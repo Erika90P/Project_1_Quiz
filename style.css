@@ -53,15 +53,14 @@ body {
 .picture {
 display:flex;
 flex-direction: column;
-border: 1px; solid rgba(255,255,255,0);
+border: 1px solid rgba(255,255,255,0);
 margin: 20px 20px;
 padding: 0;
-margin 0;
-
+margin:0px;
 
 }
 
- .user {
+.question-image {
     margin: 0px 0px ;
     border-radius: 50%;
     box-shadow: -1px 0px 268px 0px rgba(0,0,0,0.75);
