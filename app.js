@@ -13,8 +13,9 @@ const questions = [
 {  
     question: " What is the capital of Ireland??", 
     answers: [
-        {text: "Dublin" , correctAnswer: true },
-        {text: "Cork" , correctAnswer: false }
+        {text: "Cork" , correctAnswer: false },
+        {text: "Dublin" , correctAnswer: true }
+
 
         //image: "https://r7c7u2r3.rocketcdn.me/wp-content/uploads/2019/08/bigstock-Ha-penny-Bridge-Dublin-Irela-298857532.jpg"
     
@@ -81,11 +82,13 @@ function showQuestion() {
     
     // necesito el numero de la pregunta si en index la pregunta es cero va a mostrar la primera, despues la segunda y asi sucesivamente
     
-    questionGame.innerHTML = questionNum + '.' + currentQuestion.question; // this is the <h2 id= question del html>
+    questionGame.innerHTML = currentQuestion.question; // this is the <h2 id= question del html>
     
     // '.' son para separar el numero de pregunta con la pregunta .
 
     //necesito crear una funcion que cuando le de click me de las posibles respuestas de la pregunta
+
+    
     
     currentQuestion.answers.forEach(answer => {
 
@@ -97,12 +100,7 @@ function showQuestion() {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
         button.addEventListener('click', selectAnswer);
-
-
-
-
         // because I need recorrer all posible answer of the question
-
     });
 }
 

@@ -1,104 +1,124 @@
-* {
+*
+{
     margin:0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
+
+
 
 body {
-    background:rgba(131, 1, 1, 0.815)   
+    margin: 0;
+    padding: 0;
+    background-image: url(https://img.freepik.com/free-photo/texture-background_1404-62.jpg?w=2000&t=st=1710895480~exp=1710896080~hmac=9af9a7c713e72b8666d8ced8fdca8d0ba2d9a57fddc44d1ec730f31284cdb565);
+    
+    
 }
 
+
 .app {
-     width: 90%;
-    max-width: 600%;
-    border-radius: 10px;
-    padding: 30px ;
+    width: 100%;
+    max-width: 100%;
     text-align: center;
     font-size: larger;
     font-family: "Sonsie One", system-ui;
+    font-weight: 25px;
+    border-bottom: 1px; 
 }
 .app h1 {
 
     font-family: "Sonsie One", system-ui;
-    font-weight: 600px;
+    font-weight: 400px;
     font-style: normal;
-    font-size: 80px;
+    font-size: 50px;
     color: black;
-    margin: 30px 30px;
+    margin: 5px 5px;
  
 }
 
 .quiz {
-    padding: 20px 0;
+    padding: 10px 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
+    margin: 0 0 0 0 ;
 }
 
 .quiz h2 {
-
     font-size: 18px;
-    border-radius: 50%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
+    margin: 0 0 0 0 ;
 }
 
 .picture {
 display:flex;
 flex-direction: column;
-border:1px solid rgba(255,255,255,0);
-margin: 40px 40px;
+border: 1px; solid rgba(255,255,255,0);
+margin: 20px 20px;
+padding: 0;
+margin 0;
+
+
 }
 
  .user {
-    margin: 30px 30px ;
+    margin: 0px 0px ;
     border-radius: 50%;
     box-shadow: -1px 0px 268px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -1px 0px 268px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 0px 268px 0px rgba(0,0,0,0.75);
-    max-width: 100%;
-    /* max-height: 600px ; */
-    margin: 0 auto;
+    margin: auto auto auto auto;
     height: auto;
     color: rgb(33, 1, 1);
+    width: 670px;
+    height: 530px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1.5) 100%);
+    mix-blend-mode: multiply;
+    
 }
-
+    
 .btn {
     
-    margin: 30px 30px;
-    background: rgb(227, 224, 27);
-    font-weight: 500;
+    margin: 20px 20px;
+    background: rgb(235, 238, 238);
     border: 2px solid rgb(19, 19, 18);
-    width: 100px;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-    border-top: 20px ;
+    border-top: 40px ;
     cursor: pointer;
     transition: all 1s;
-    color: blue;
+    color: rgb(0, 0, 4);
+    font-size: x-large;
+    font-family: "Sonsie One", system-ui;;
 }
 
 .btn:hover:not([disabled]){
 
     background: white;
-    color:rgb(120, 10, 10);
+    color:rgb(12, 0, 0);
     padding: 20px 0;
 }
+
 .btn:disabled{ 
-    cursor: no-drop;
+    cursor: no-drop
 }
+
 #next-btn {
     background: rgb(167, 160, 177);
     color:black;
     width: 100px;
-    padding: 10px;
-
+    padding: 15px;
+    font-family: "Sonsie One", system-ui;
+    margin: auto auto auto auto;
+    text-transform: capitalize;
+    
 }
 
 .correct {
 
-    background:rgb(227, 224, 27)
+    background:rgba(219, 216, 77, 0.674)
 }
 .incorrect {
 
-    background: tomato;
+    background: rgb(219, 113, 108);
 }
