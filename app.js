@@ -184,8 +184,9 @@ function selectAnswer(e) {
 function showScore() {
     resetState();
     questionGame.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextBtn.innerHTML = 'Play Again'
     nextBtn.style.display = 'none'; // Oculta el botón "Next"
-    // nextBtn.style.display = 'block'
+    nextBtn.style.display = 'block'
     };
 
 function handleNextbtn() {
@@ -195,7 +196,6 @@ function handleNextbtn() {
 
     } else {
         showScore();
-
     }
 
 }
@@ -207,6 +207,7 @@ nextBtn.addEventListener('click', () => {
         console.log('this handleNextbtn function is being executed')
     } else {
         startQuestion();
+        currentQuestionIndex = -1
         console.log('this startquestion function is being executed')
     }
 });
