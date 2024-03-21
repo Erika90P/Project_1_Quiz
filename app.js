@@ -207,7 +207,7 @@ nextBtn.addEventListener('click', () => {
         console.log('this handleNextbtn function is being executed')
     } else {
         startQuestion();
-        currentQuestionIndex = -1
+        currentQuestionIndex = -1 
         console.log('this startquestion function is being executed')
     }
 });
