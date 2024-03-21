@@ -21,7 +21,7 @@ MVP Goals
  * The player should to navigade for the next question
  * The player can view the game score at the end of the game
  
- Stretch Goal
+' Stretch Goal'
  
  * As a player, I would like a victory animation when I win the game, so that I feel good about my victory!
 

@@ -81,12 +81,14 @@ const questions = [
 ]
 const alertMesagge = "Game Over"
 
-// My game have 3 buttons//
+// DOM elements//
 
 const questionGame = document.getElementById('question');
 const pictureDiv = document.getElementById('picture')
 const answerButton = document.getElementById('answerButtons');
 const nextBtn = document.getElementById('next-btn')
+const defeatSound = document.getElementById('defeat');
+const victorySound = document.getElementById('victory-sound');
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -98,14 +100,15 @@ let currentQuestionIndex = 0;
 
 // necesito una funcion que cada vez que presione el btn next me de la opcion de llamar a la pregunta que este conectada con html(inner.text)
 
+
+// function to start the game 
 function startQuestion() { // con esta funcion estoy empezando a utilizar la pregunta
 
     currentQuestionIndex = 0
     score = 0
     nextBtn.innerHTML = "Next"
-
-
 }
+// function to show the questions
 showQuestion();
 
 function showQuestion() {
@@ -142,6 +145,7 @@ function showQuestion() {
         // because I need recorrer all posible answer of the question
     });
 }
+ // Function to reset the state of the response buttons
 
 function resetState() {
     nextBtn.style.display = 'none';
@@ -150,6 +154,7 @@ function resetState() {
     }
 }
 
+// Function to handle the selection of an answer
 
 function selectAnswer(e) {
     const selectedbtn = e.target;
@@ -180,14 +185,28 @@ function selectAnswer(e) {
 
     nextBtn.style.display = 'block';
 }
+//Function to display the final score and play the corresponding sound
 
 function showScore() {
     resetState();
+
     questionGame.innerHTML = `You scored ${score} out of ${questions.length}!`;
+
+    if (score < 5){
+        const defeatSound = document.getElementById('defeat');
+        defeatSound.play();
+    } else {
+        const victorySound = document.getElementById('victory-sound');
+        victorySound.play();
+
+    };
+
     nextBtn.innerHTML = 'Play Again'
     nextBtn.style.display = 'none'; // Oculta el botón "Next"
     nextBtn.style.display = 'block'
-    };
+}
+
+//Function to handle the "Next" button
 
 function handleNextbtn() {
     currentQuestionIndex++; // increases the question 
@@ -196,9 +215,9 @@ function handleNextbtn() {
 
     } else {
         showScore();
-    }
-
-}
+    };
+};
+// Event listener para el botón "Next"
 
 nextBtn.addEventListener('click', () => {
     if (currentQuestionIndex < questions.length) {
@@ -211,8 +230,7 @@ nextBtn.addEventListener('click', () => {
         console.log('this startquestion function is being executed')
     }
 });
-
-
+// Event listener para cargar el juego cuando el DOM esté completamente cargado
 
 // necesito crear una funcion que cuando le de click me de las posibles respuestas de la pregunta
 
