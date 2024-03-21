@@ -83,17 +83,13 @@ const alertMesagge = "Game Over"
 
 // My game have 3 buttons//
 
-
-const alertMessage = "Game Over"
 const questionGame = document.getElementById('question');
 const pictureDiv = document.getElementById('picture')
 const answerButton = document.getElementById('answerButtons');
 const nextBtn = document.getElementById('next-btn')
 
-    // pictureDiv.appendChild()
 
 /*---------------------------- Variables (state) ----------------------------*/
-
 
 let score = 0;
 let currentQuestionIndex = 0;
@@ -120,20 +116,13 @@ function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     // porque le estoy pidiendo que me de las preguntas contenidas este index
 
-    let questionNum = currentQuestionIndex;
-    console.log('questionNum, ', questionNum);
-
     // necesito el numero de la pregunta si en index la pregunta es cero va a mostrar la primera, despues la segunda y asi sucesivamente
 
     questionGame.innerHTML = currentQuestion.question; // this is the <h2 id= question del html>
 
-    // '.' son para separar el numero de pregunta con la pregunta .
 
     //necesito crear una funcion que cuando le de click me de las posibles respuestas de la pregunta
 
-
-    // const pictureDiv = document.getElementsByClassName('picture')
-    // pictureDiv.appendChild()
 
     const imageElement = document.createElement('img');
     imageElement.src = currentQuestion.image;
@@ -191,12 +180,6 @@ function selectAnswer(e) {
 
     nextBtn.style.display = 'block';
 }
-// function showScore() {
-//     resetState();
-//     questionGame.innerHTML = `you scored ${score}out of ${questions.length}!`;
-//     nextBtn.innerHTML = 'Play Again!';
-//     nextBtn.style.display = 'block'
-// }
 
 function showScore() {
     resetState();
@@ -227,13 +210,6 @@ nextBtn.addEventListener('click', () => {
         console.log('this startquestion function is being executed')
     }
 });
-
-// startQuestion();
-
-
-
-
-//console.log(showQuestion(currentCuestionIndex));
 
 
 

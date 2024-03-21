@@ -3,8 +3,7 @@
 This is my first project Lucidchart [Travel around the world](https://lucid.app/lucidchart/634839e7-793d-4712-814f-1e7d426aa1a9/edit?viewport_loc=-68%2C205%2C2441%2C1316%2C0_0&invitationId=inv_4d3bc6c7-d7a2-4dbb-ad3f-5120571a2959)
 
 
-
-- [ ] Trivia (Self-scoring)
+- Trivia
 
 
 ## Project Description 
@@ -16,30 +15,37 @@ This game is one-on-one.”
 
 MVP Goals
 
-* The layer should be given 8 questions that they can aswer
- * The player must select the correct answer to continue to the next question
+ * The layer should be given 8 questions that they can aswer
+ * The player must select the answer they consider to continue with the next question.
  * The player will receive an immediate alert when selecting the answer
  * The player should to navigade for the next question
- * The player should have a end of game state that show the score 
+ * The player can view the game score at the end of the game
  
  Stretch Goal
  
  * As a player, I would like a victory animation when I win the game, so that I feel good about my victory!
 
- * As a player I would like a vitory sound animation  when I win the game, so that I feel good about my victory!
+ * As a player, I would like to hear the sound of victory when the game ends, to feel good about my victory!
  
 #### Timeline - Daily Accountability
 
-
-| Day        |   | Task                               | Blockers | Notes/ Thoughts |
-|------------|---|------------------------------------|----------|-----------------|
-| Monday     |   | Create and present proposal        |          |                 |
-| Monday     |   | Create html, js, css files         |          |                 |
-| Tuesday    |   | Create basic scaffolding           |          |                 |
-| Wednesday  |   | Add functionality                  |          |                 |
-| Thursday   |   | Add styling                        |          |                 |
-| Friday     |   | Finaliza MVP                       |          |                 |
-| Saturday.  |   | Work on stretch goals              |          |                 |
-| Sunday     |   | Work on icebox items if applicable |          |                 |
-| Monday     |   | Presentation Day!                  |          |                 |
-|            |                                        |          |                 |
+___________________________________________________________________________________________________________
+| Day        |   | Task                                                      | Blockers | Notes/ Thoughts |
+|------------|---|-------------------------------------------------------------------|----------|---------|
+| Monday     |   | Create and present proposal                                       |          |         |
+| Monday     |   | Correct and add important objectives in the proposal              |          |         |
+| Monday     |   | Create html, js, css files                                        |          |         |
+| Monday     |   | Create the skeleton of the game design in html and css            |          |         |
+| Tuesday    |   | Create code bases in javascript                                   |          |         |
+| Wednesday  |   | Add functionality                                                 |          |         |
+| Thursday   |   | Add styling                                                       |          |         |
+| Thursday   |   | Finaliza MVP                                                      |          |         |
+| Thursday   |   | Work on stretch goals                                             |          |         |
+| Thursday   |   | Work on stretch goals                                             |          |         |
+| Thursday   |   | Start creating the readme                                         |          |         |
+| Friday     |   | Complete the readme                                               |          |         |
+| Saturday   |   | Check that css, html and javascript are without any type of error |          |         |
+|  Sunday    |   | Ensure the complete functionality of the game                     |          |         |
+|  Sunday    |   | Review compliance with project objectives                         |          |         |
+|  Monday    |   | Presentation Day!                                                 |          |         |
+|__________________________________________________________________________________________________________
