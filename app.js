@@ -202,13 +202,8 @@ function showScore() {
     resetState();
     questionGame.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextBtn.style.display = 'none'; // Oculta el botón "Next"
-    tryAgainBtn.style.display = 'block'; // Muestra el botón "Try Again"
-    tryAgainBtn.addEventListener('click', () => {
-        startQuestion(); // Reinicia el juego al hacer clic en "Try Again"
-        tryAgainBtn.style.display = 'none'; // Oculta el botón "Try Again"
-
-    });
-}
+    // nextBtn.style.display = 'block'
+    };
 
 function handleNextbtn() {
     currentQuestionIndex++; // increases the question 
