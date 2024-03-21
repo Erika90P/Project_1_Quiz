@@ -217,7 +217,7 @@ function handleNextbtn() {
         showScore();
     };
 };
-// Event listener para el botón "Next"
+// Event listener for the botton "Next"
 
 nextBtn.addEventListener('click', () => {
     if (currentQuestionIndex < questions.length) {
@@ -230,7 +230,6 @@ nextBtn.addEventListener('click', () => {
         console.log('this startquestion function is being executed')
     }
 });
-// Event listener para cargar el juego cuando el DOM esté completamente cargado
 
 // necesito crear una funcion que cuando le de click me de las posibles respuestas de la pregunta
 
