@@ -79,7 +79,6 @@ const questions = [
         image: "https://www.brussels.be/sites/default/files/styles/article_image__hd_/public/Manneken-Pis_1.jpg?itok=Sj9G92Kw"
     }
 ]
-const alertMesagge = "Game Over"
 
 // DOM elements//
 

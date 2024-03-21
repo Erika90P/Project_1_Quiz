@@ -29,23 +29,23 @@ MVP Goals
  
 #### Timeline - Daily Accountability
 
-___________________________________________________________________________________________________________
-| Day        |   | Task                                                      | Blockers | Notes/ Thoughts |
-|------------|---|-------------------------------------------------------------------|----------|---------|
-| Monday     |   | Create and present proposal                                       |          |         |
-| Monday     |   | Correct and add important objectives in the proposal              |          |         |
-| Monday     |   | Create html, js, css files                                        |          |         |
-| Monday     |   | Create the skeleton of the game design in html and css            |          |         |
-| Tuesday    |   | Create code bases in javascript                                   |          |         |
-| Wednesday  |   | Add functionality                                                 |          |         |
-| Thursday   |   | Add styling                                                       |          |         |
-| Thursday   |   | Finaliza MVP                                                      |          |         |
-| Thursday   |   | Work on stretch goals                                             |          |         |
-| Thursday   |   | Work on stretch goals                                             |          |         |
-| Thursday   |   | Start creating the readme                                         |          |         |
-| Friday     |   | Complete the readme                                               |          |         |
-| Saturday   |   | Check that css, html and javascript are without any type of error |          |         |
-|  Sunday    |   | Ensure the complete functionality of the game                     |          |         |
-|  Sunday    |   | Review compliance with project objectives                         |          |         |
-|  Monday    |   | Presentation Day!                                                 |          |         |
-|__________________________________________________________________________________________________________
+_____________________________________________________________________________________________________
+| Day       |    Task                                                           | Blockers | Note    |
+|-----------|-------------------------------------------------------------------|----------|---------|
+| Monday    | Create and present proposal                                       |          |         |
+| Monday    | Correct and add important objectives in the proposal              |          |         |
+| Monday    | Create html, js, css files                                        |          |         |
+| Monday    | Create the skeleton of the game design in html and css            |          |         |
+| Tuesday   | Create code bases in javascript                                   |          |         |
+| Wednesday | Add functionality                                                 |          |         |
+| Thursday  | Add styling                                                       |          |         |
+| Thursday  | Finaliza MVP                                                      |          |         |
+| Thursday  | Work on stretch goals                                             |          |         |
+| Thursday  | Work on stretch goals                                             |          |         |
+| Thursday  | Start creating the readme                                         |          |         |
+| Friday    | Complete the readme                                               |          |         |
+| Saturday  | Check that css, html and javascript are without any type of error |          |         |
+|  Sunday   | Ensure the complete functionality of the game                     |          |         |
+|  Sunday   | Review compliance with project objectives                         |          |         |
+|  Monday   | Presentation Day!                                                 |          |         |
+|_____________________________________________________________________________________________________
