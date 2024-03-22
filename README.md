@@ -3,7 +3,7 @@ WANDERER
 Quiz Game
 ___________
 
-
+![This is the game home page](/assests/Screenshot%202024-03-21%20at%2010.02.27 PM.png)
 
 
 Description
