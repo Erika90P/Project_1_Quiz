@@ -1,6 +1,6 @@
 # Project Proposal Example
 
-This is my first project Lucidchart [Travel around the world](https://lucid.app/lucidchart/634839e7-793d-4712-814f-1e7d426aa1a9/edit?viewport_loc=-68%2C205%2C2441%2C1316%2C0_0&invitationId=inv_4d3bc6c7-d7a2-4dbb-ad3f-5120571a2959)
+This is my first project Lucidchart [Travel around the world](https://lucid.app/lucidchart/634839e7-793d-4712-814f-1e7d426aa1a9/view?page=0_0&invitationId=inv_4d3bc6c7-d7a2-4dbb-ad3f-5120571a2959#)
 
 
 - Trivia
