@@ -15,10 +15,10 @@ This game is one-on-one.”
 
 MVP Goals
 
- * The layer should be given 8 questions that they can aswer
+ * The player should be given 8 questions that they can aswer
  * The player must select the answer they consider to continue with the next question.
  * The player will receive an immediate alert when selecting the answer
- * The player should to navigade for the next question
+ * The player should be able to navigate to the next question
  * The player can view the game score at the end of the game
  
 ' Stretch Goal'
