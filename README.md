@@ -2,6 +2,7 @@ WANDERER
 
 Quiz Game
 
+<img width="1083" alt="Screenshot 2024-03-21 at 10 02 27 PM" src="https://github.com/Erika90P/Project_1_Quiz/assets/161628044/7e80f931-049e-4643-8c9b-6797e8798fd2">
 
 
 
