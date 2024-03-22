@@ -3,6 +3,7 @@ WANDERER
 Quiz Game
 ___________
 
+<img width="1083" alt="Screenshot 2024-03-21 at 10 02 27 PM" src="https://github.com/Erika90P/Project_1_Quiz/assets/161628044/7e80f931-049e-4643-8c9b-6797e8798fd2">
 
 
 
@@ -23,10 +24,10 @@ CSS
 How to Play
 ___________
 
-Click the "Start" button to begin the game.
-Read each question carefully and select the answer you believe is correct.
-Click the "Next" button to move on to the next question.
-After answering all questions, your final score will be displayed.
+* Click the "Start" button to begin the game.
+* Read each question carefully and select the answer you believe is correct.
+* Click the "Next" button to move on to the next question.
+* After answering all questions, your final score will be displayed.
 
 Pseudocode Explanation
 ______________________
@@ -38,7 +39,8 @@ Constants
 Variables (state)
 
 * score: The player's current score.
-currentQuestionIndex: The index of the current question being displayed.
+
+* currentQuestionIndex: The index of the current question being displayed.
 
 Functions
 
@@ -46,6 +48,7 @@ Functions
 * showQuestion: Displays the current question and its answers. It resets the state of the answer buttons, sets the question text, and creates buttons for each answer. It also displays the image related to the question.
 * resetState: Resets the state of the answer buttons by hiding the nextBtn and removing all child elements from the answerButton element.
 * selectAnswer: Handles the selection of an answer. It checks if the selected answer is correct, updates the score, displays a celebration or sad emoji, disables all answer buttons, and displays the nextBtn.
-showScore: Displays the final score and plays a sound effect based on the score. It also changes the innerHTML of the nextBtn to "Play Again" and displays it.
+
+* showScore: Displays the final score and plays a sound effect based on the score. It also changes the innerHTML of the nextBtn to "Play Again" and displays it.
 * handleNextbtn: Handles the "Next" button click. It increases the currentQuestionIndex and checks if there are more questions to show or if the game is over.
 
