@@ -1,3 +1,14 @@
+/* My logic
+
+* Set constantes and variables.
+* Create a function that every time the btn next is pressed calls the question that is connected to the html (inner.text).
+* Create a function to display the questions.
+* Create a function to reset the question and answer.
+* Creat a function to see the score.
+
+
+
+
 /*-------------------------------- Constants --------------------------------*/
 const questions = [
     {
@@ -97,17 +108,16 @@ let currentQuestionIndex = 0;
 
 /*-------------------------------- Functions --------------------------------*/
 
-// necesito una funcion que cada vez que presione el btn next me de la opcion de llamar a la pregunta que este conectada con html(inner.text)
-
-
 // function to start the game 
-function startQuestion() { // con esta funcion estoy empezando a utilizar la pregunta
 
+function startQuestion() { 
     currentQuestionIndex = 0
     score = 0
     nextBtn.innerHTML = "Next"
 }
+
 // function to show the questions
+
 showQuestion();
 
 function showQuestion() {
@@ -115,18 +125,13 @@ function showQuestion() {
 
     // reset previos questions and answer 
 
-    let currentQuestion = questions[currentQuestionIndex];
-    // porque le estoy pidiendo que me de las preguntas contenidas este index
-
-    // necesito el numero de la pregunta si en index la pregunta es cero va a mostrar la primera, despues la segunda y asi sucesivamente
-
+    let currentQuestion = questions[currentQuestionIndex]; //request index questions
     questionGame.innerHTML = currentQuestion.question; // this is the <h2 id= question del html>
 
 
-    //necesito crear una funcion que cuando le de click me de las posibles respuestas de la pregunta
+    // In this function, the code dynamically creates HTML elements to display the question's image and answer buttons in the game.
 
-
-    const imageElement = document.createElement('img');
+    const imageElement = document.createElement('img');     
     imageElement.src = currentQuestion.image;
     imageElement.classList.add('question-image');
     answerButton.appendChild(imageElement);
@@ -140,8 +145,7 @@ function showQuestion() {
         if (answer.correctAnswer) {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
-        button.addEventListener('click', selectAnswer);
-        // because I need recorrer all posible answer of the question
+        button.addEventListener('click', selectAnswer);  //go through all the possible answers to the questions
     });
 }
  // Function to reset the state of the response buttons
@@ -154,6 +158,8 @@ function resetState() {
 }
 
 // Function to handle the selection of an answer
+
+//This function selectAnswer is triggered when a user clicks on one of the answer buttons. It handles the logic for checking if the selected answer is correct or incorrect, updates the score accordingly, provides visual feedback to the user (celebration emoji for correct answers and sad emoji for incorrect answers), disables all answer buttons once an answer is selected, and displays the "Next" button (nextBtn) to allow the user to proceed to the next question.
 
 function selectAnswer(e) {
     const selectedbtn = e.target;
@@ -229,12 +235,3 @@ nextBtn.addEventListener('click', () => {
         console.log('this startquestion function is being executed')
     }
 });
-
-// necesito crear una funcion que cuando le de click me de las posibles respuestas de la pregunta
-
-
-
-// necesito crear una funion que cuando selecciones la respuesta incorrecta me salga alerts de "Game Over "
-// necesito crear una funcion que al dar click me una alerta si la respuesta es correcta o incorrecta pasando por html y usando conficion if
-
-// necesito crear una funcion
