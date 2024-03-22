@@ -101,6 +101,13 @@ const defeatSound = document.getElementById('defeat');
 const victorySound = document.getElementById('victory-sound');
 
 
+
+
+
+
+
+
+
 /*---------------------------- Variables (state) ----------------------------*/
 
 let score = 0;
@@ -164,6 +171,7 @@ function resetState() {
 function selectAnswer(e) {
     const selectedbtn = e.target;
     const isCorrect = selectedbtn.dataset.correctAnswer === 'true'
+
     if (isCorrect) {
         selectedbtn.classList.add('correct');
         score++;
@@ -190,6 +198,9 @@ function selectAnswer(e) {
 
     nextBtn.style.display = 'block';
 }
+
+
+
 //Function to display the final score and play the corresponding sound
 
 function showScore() {
@@ -200,9 +211,21 @@ function showScore() {
     if (score < 5){
         const defeatSound = document.getElementById('defeat');
         defeatSound.play();
+        const sadEmoji = document.createElement('span');
+        sadEmoji.innerHTML = '😭😭😭 ';
+        sadEmoji.classList.add('sad-emoji');
+        questionGame.appendChild(sadEmoji);
+    
+        
+
     } else {
         const victorySound = document.getElementById('victory-sound');
         victorySound.play();
+        const celebrationEmoji = document.createElement('span');
+        celebrationEmoji.innerHTML = ' 🎉🎉🎉 ';
+        celebrationEmoji.classList.add('celebration-emoji');
+        questionGame.appendChild(celebrationEmoji);
+        
 
     };
 
@@ -210,6 +233,7 @@ function showScore() {
     nextBtn.style.display = 'none'; // Oculta el botón "Next"
     nextBtn.style.display = 'block'
 }
+
 
 //Function to handle the "Next" button
 
@@ -220,8 +244,10 @@ function handleNextbtn() {
 
     } else {
         showScore();
+        cancelAnimationFrame(animationId);
     };
 };
+
 // Event listener for the botton "Next"
 
 nextBtn.addEventListener('click', () => {
@@ -235,3 +261,4 @@ nextBtn.addEventListener('click', () => {
         console.log('this startquestion function is being executed')
     }
 });
+
